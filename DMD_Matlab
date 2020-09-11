@@ -5,11 +5,8 @@ dt = t(2) - t(1);
 [Xgrid,T] = meshgrid(xi,t);
 
 %% Create two spatio-temporal patterns
-%f1 = sech(Xgrid+3) .* (1*exp(1j*2.3*T));
-%f2 = (sech(Xgrid).*tanh(Xgrid)).*(2*exp(1j*2.8*T));
-
-f1 = sech(Xgrid+3);
-f2 = (sech(Xgrid));
+f1 = sech(Xgrid+3) .* (1*exp(1j*2.3*T));
+f2 = (sech(Xgrid).*tanh(Xgrid)).*(2*exp(1j*2.8*T));
 
 %% Combine signals and make data matrix
 f = f1 + f2;
